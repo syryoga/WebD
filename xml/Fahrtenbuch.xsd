@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://a.org/Fahrtenbuch.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://a.org/Fahrtenbuch.xsd"
+    xmlns:mstns="http://a.org/Fahrtenbuch.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+	<!--fahrtenbuch-->
+	<xs:element name="fahrtenbuch">
+		<xs:complexType>
+			<xs:sequence>
+				<!--fahrt-->
+				<xs:element name="fahrt">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="datum" type="xs:string"/>
+							<!--fahrer-->
+							<xs:element name="fahrer">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="vorname" maxOccurs="2" type="xs:string" default="Max"></xs:element>
+										<xs:element name="nachname" type="xs:string" default="Muster"></xs:element>
+										<xs:element name="alter" default="65">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+													<xs:minInclusive value="18"></xs:minInclusive>
+													<xs:maxInclusive value="65"></xs:maxInclusive>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="geschlecht" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Mann"></xs:enumeration>
+												<xs:enumeration value="Frau"></xs:enumeration>
+												<xs:enumeration value="Inter"></xs:enumeration>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="personalnummer" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:pattern value="[A-Z]{5}[0-9]{5}"></xs:pattern>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<!--fon-->
+							<xs:element name="von" type="xs:string" default="Mittighofen"></xs:element>
+							<!--nach-->
+							<xs:element name="nach" type="xs:string" default="Uttendorf"></xs:element>
+							<!--uhrzeit-->
+							<xs:element name="uhrzeit">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="von" type="xs:time" default="09:00:00"></xs:element>
+										<xs:element name="bis" type="xs:time" default="09:15:00"></xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<!--kilometerstand-->
+							<xs:element name="kilometerstand">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="anfang" default="1015.5">
+											<xs:simpleType>
+												<xs:restriction base="xs:float">
+													<xs:minInclusive value="0"></xs:minInclusive>
+													<xs:maxInclusive value="200000"></xs:maxInclusive>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="ende" default="1021.6">
+											<xs:simpleType>
+												<xs:restriction base="xs:float">
+													<xs:minInclusive value="0"></xs:minInclusive>
+													<xs:maxInclusive value="200000"></xs:maxInclusive>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<!--fahrzeug-->
+							<xs:element name="fahrzeug">
+								<xs:complexType>
+									<xs:sequence>
+										<!--marke-->
+										<xs:element name="marke">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="BMW"></xs:enumeration>
+													<xs:enumeration value="Opel"></xs:enumeration>
+													<xs:enumeration value="Ford"></xs:enumeration>
+													<xs:enumeration value="Fiat"></xs:enumeration>
+													<xs:enumeration value="Mercedes"></xs:enumeration>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<!--farbe-->
+										<xs:element name="farbe">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="Rot"></xs:enumeration>
+													<xs:enumeration value="Grün"></xs:enumeration>
+													<xs:enumeration value="Blau"></xs:enumeration>
+													<xs:enumeration value="Schwarz"></xs:enumeration>
+													<xs:enumeration value="Weiss"></xs:enumeration>
+													<xs:enumeration value="Silber"></xs:enumeration>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<!--typ-->
+										<xs:element name="typ" type="xs:string"></xs:element>
+										<!--kenzeichen-->
+										<xs:element name="kenzeichen" type="xs:string"></xs:element>
+									</xs:sequence>
+									<xs:attribute name="kfzArt" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="SUV"></xs:enumeration>
+												<xs:enumeration value="PKW"></xs:enumeration>
+												<xs:enumeration value="LKW"></xs:enumeration>
+												<xs:enumeration value="Kombi"></xs:enumeration>
+												<xs:enumeration value="Transporter"></xs:enumeration>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="kraftstoffart" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Benzin"></xs:enumeration>
+												<xs:enumeration value="Diesel"></xs:enumeration>
+												<xs:enumeration value="Gas"></xs:enumeration>
+												<xs:enumeration value="Elektro"></xs:enumeration>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="versicherung" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Teilkasko"></xs:enumeration>
+												<xs:enumeration value="Kasko"></xs:enumeration>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="zustand" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Reparatur"></xs:enumeration>
+												<xs:enumeration value="Verfügbar"></xs:enumeration>
+												<xs:enumeration value="Unterwegs"></xs:enumeration>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		
+	</xs:element>
+</xs:schema>
