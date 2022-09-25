@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulare</title>
+</head>
+
+<body>
+    <h1>Formular</h1>
+    <form action="#">
+        <fieldset>
+            <legend><h4>Formularsteuerelemente</h4> </legend>
+            <table>
+                <tr>
+                    <td>Vorname:</td>
+                    <td>
+                        <!-- 
+                            maxlength => Maximale Anzahl von Buchstaben
+                            id => ID- Wert im gesamten Dokument nur 1x vorkommen
+                            placeholder => Platzhalter
+                            autofocus => Feld wird beim laden direkt angesprungen
+                            tabindex => Reihenfolge
+                            size => Elementgröße
+                            name => globales Attribut
+                            disabled => ausgegraut und Eingabefeld kann nicht markiert werden
+                            readonly => Eingabefeld kann markiert und Wert (value) kann kopiert werden
+                            value => vordefinierter Wert
+                            required => Pflicht
+                        -->
+                        <input type="text" id="vorname" size="10" readonly value="Andreas">
+                    </td>
+                </tr>
+                <tr>
+                    <!--tr>td{Geschecht}+td>(input:radio[name=geschlecht])*3-->
+                    <td>Geschlecht:</td>
+                    <td>
+                        <!-- checked => Vorauswahl -->
+                        <input type="radio" name="geschlecht" id="Mann" checked>
+                        <label for="Mann">Mann</label></input>
+                        
+                        <input type="radio" name="geschlecht" id="Frau">
+                        <label for="Frau">Frau</label></input>
+
+                        <input type="radio" name="geschlecht" id="Inter">
+                        <label for="Inter">Inter</label></input>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>Kontakt:</td>
+                    <td>
+                        <input type="checkbox" name="kontakt" id="SMS"><label for="SMS">SMS</label>
+                        <input type="checkbox" name="kontakt" id="Fax" checked><label for="Fax">Fax</label>
+                        <input type="checkbox" name="kontakt" id="Post"><label for="Post">Post</label>
+                        <input type="checkbox" name="kontakt" id="E-Mail"><label for="E-Mail">E-Mail</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Farbe</td>
+                    <td><input type="color" name="Farbe" id="Farbe" ></td>
+                </tr>
+                <tr>
+                    <td>Kenwort</td>
+                    <td><input type="passwort" name="kw" id="kw"></td>
+                </tr>
+                <tr>
+                    <td>Datei</td>
+                    <!-- multiple => mögliches Attribut zum Auswählen mehrerer Dateien -->
+                    <td><input type="file" name="Datei" id="Datei" multiple></td>
+                </tr>
+
+                <tr>
+                    <td>Teilnehmer</td>
+                    <td>
+                        <!-- size => Anzahl der Sichtbaren Einträge
+                             multiple => Ermöglicht die Auswahl mehrerer Einträge mit STRG- Taste -->
+                        <select name="Teilnehmer" id="tn">
+                            <option value="FA">Frischauf Alois 
+                            <option value="MR">Mader Robin 
+                            <option value="PS">Pascal Serghei 
+                            <option value="LM">Lenna Markus 
+                            <option value="GH">Hradil Gerald 
+                            <option value="KR">Kirchmair Roland 
+                            <option value="MM">Mayerhofer Manuel 
+                        </select>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Klassen</td>
+                    <td>
+                        <select name="APP" id="APP">
+                            <optgroup label="Applikationsentwickler">
+                                <option value="AP10">IT-AP10 
+                                <option value="AP11">IT-AP11 
+                                <option value="AP12">IT-AP12 
+                                <option value="AP13">IT-AP13 
+                                <option value="AP14">IT-AP14 
+                            </optgroup>
+                            <optgroup label="Systemtechniker">
+                                <option value="ST10">IT-ST10 
+                                <option value="ST11">IT-ST11 
+                                <option value="ST12">IT-ST12 
+                                <option value="ST13">IT-ST13 
+                                <option value="ST14">IT-ST14 
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Stadt</td>
+                    <td>
+                        <input type="text" list="Staedte">
+                        <datalist id="Staedte">
+                            <option value="Salzburg"> 
+                            <option value="Mattighofen"> 
+                            <option value="Mattersburg"> 
+                            <option value="Uttendorf"> 
+                            <option value="Krems"> 
+                            <option value="Kapfenberg"> 
+                            <option value="Kindberg"> 
+                            <option value="Eisenstadt"> 
+                            <option value="Villach"> 
+                            <option value="Bregenz"> 
+                            <option value="Braunau"> 
+                            <option value="Wien"> 
+                            <option value="Wiener Neustadt"> 
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td>E-Mail</td>
+                    <td><input type="email" name="Email" id="Email"></td>
+                </tr>
+                <tr>
+                    <td>Webseite</td>
+                    <td><input type="url" name="Webseite" id="Webseite"></td>
+                </tr>
+
+                <tr>
+                    <td>Telefonnummer</td>
+                    <td><input type="tel" name="Tel" id="Tel"></td>
+                </tr>
+
+                <tr>
+                    <td>Geburtsdatum</td>
+                    <td><input type="date" name="GebDat" id="GebDate" min="2022-21-01" max="2022-04-25"></td>
+                </tr>
+
+                <tr>
+                    <td>Woche</td>
+                    <td><input type="week" name="Woche" id="Woche"></td>
+                </tr>
+
+                <tr>
+                    <td>Monat</td>
+                    <td><input type="month" name="Monat" id="Monat"></td>
+                </tr>
+
+                <tr>
+                    <td>Zeit</td>
+                    <td><input type="time" name="Zeit" id="Zeit"></td>
+                </tr>
+
+                <tr>
+                    <td>Zahl</td>
+                    <td><input type="number" min="0" max="35" step="5"></td>
+                </tr>
+                <tr>
+                    <td>Range</td>
+                    <td><input type="range" min="0" max="100" step="2"></td>
+                </tr>
+                <tr>
+                    <td>Kommentar</td>
+                    <td><textarea name="Kommentar" id="Kommentar" cols="50" rows="10" placeholder="Gehben Sie ihren Senf ab"></textarea></td>
+                </tr>
+
+            </table>
+
+        </fieldset>
+        <input type="submit" value="Absenden">
+        <input type="reset" value="Zürücksetzen">
+    </form>
+    <button ">Absenden</button>
+</body>
+
+</html>

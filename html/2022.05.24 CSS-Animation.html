@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/ContainerUndBoxen.css">
+    <style>
+        .container{
+            padding: 0px;
+        }
+        .box{
+            /* 
+            Farbwechsel_? => Animationsname
+            3s => Dauer
+            infinite unendliche Wiederholung */
+            position: relative;
+            animation: farbWechsel_1 3s infinite;
+            animation: farbWechsel_2 3s infinite;
+            animation: farbWechsel_3 3s infinite;
+            animation: farbWechsel_4 3s infinite;
+            animation: nachRechts 3s infinite;
+            animation: nachUnten 3s infinite;
+            animation: diagonal 3s infinite;
+        }
+        @keyframes diagonal {
+            0%,100%{left: 0px;}
+            50%{left: 698px;}
+            0%,100%{top: 0px;}
+            50%{top: 698px;}
+        }
+        @keyframes nachRechts {
+            0%,100%{left: 0px;}
+            50%{left: 698px;}
+        }
+        @keyframes nachUnten {
+            0%,100%{top: 0px;}
+            50%{top: 698px;}
+        }
+
+        @keyframes farbWechsel_4 {
+            0%,100%{background-color: yellow;}
+            50%{background-color: skyblue;}
+        }
+        @keyframes farbWechsel_3{
+            0%{background-color: yellow;}
+            50%{background-color: lime;}
+            100%{background-color: yellow;}
+        }
+        @keyframes farbWechsel_2 {
+            0%{border-color: yellow;}
+            100%{border-color: maroon;}
+        }
+        @keyframes farbWechsel_2 {
+            0%{border-color: yellow;}
+            100%{border-color: magenta;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            
+        </div>
+    </div>
+</body>
+</html>

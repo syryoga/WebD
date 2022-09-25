@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/jsFormatierungen.css">
+    <script src="../js/jsFunctionen.js"></script>
+    <script>
+        function fx(){
+
+            var x;
+
+            ausgaben("ausgabe1",typeof(x));
+
+            x="Pascal";
+            ausgaben("ausgabe2",typeof(x));
+
+            x=2;
+            ausgaben("ausgabe3",typeof(x));
+
+            x=true
+            ausgaben("ausgabe4",typeof(x));
+
+            x={vorname:"Serghei",nachname:"Pascal"};
+            ausgaben("ausgabe5",typeof(x));
+
+        }
+        
+        function add(){
+            var x = parseInt(prompt("Geben Sie die 1. Zahl ein")); 
+            var y = parseInt(prompt("Geben Sie die 2. Zahl ein"));
+            ausgabe("Ergebnis: "+ (x+y)); 
+        };
+    </script>
+</head>
+<body>
+    <div id="ausgabe1"></div>
+    <div id="ausgabe2"></div>
+    <div id="ausgabe3"></div>
+    <div id="ausgabe4"></div>
+    <div id="ausgabe5"></div>
+    <button onclick="fx()">Klick mich</button>
+    <button onclick="add()">Addieren</button>
+</body>
+</html>

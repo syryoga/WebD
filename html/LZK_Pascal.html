@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>LZK-Pascal</title>
+    <meta charset="utf-8">
+    <meta content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .jumbotron {
+            background-color: maroon;
+            color: gold;
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">
+          <img src="../images/bbrz.png" alt="logo" style="width:40px;">
+        </a>
+        
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">HTML</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CSS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Bootstrap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">XML</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">JavaScript</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Ende Navbar -->
+    <div class="container-fluid">
+        <!-- Header -->
+        <div class="row">
+            <div class="col-md-12">
+                <header class="jumbotron">
+                    <h1 class="display-1">Lernzielkontrolle-Pascal</h1>
+                </header>
+            </div>
+        </div>
+        <!-- Ende Header -->
+        <div class="row">
+            <!-- Alerts -->
+            <div class="col-md-6">
+                <h3>Wegklickbare Alerts</h3>
+                <div class="alert alert-primary alertdismissible fad show" role="alert">
+                    <strong>Lernzielkontrolle:</strong> Pascal
+                    <button type="button" class="close" data-dismiss="alert" aria-label="close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <h3>Eifache Alerts</h3>
+                <div class="alert alert-primary" role="alert"><strong>Lernzielkontrolle:</strong> Pascal</div>
+            </div>
+            <!-- Ende Alerts -->
+            <!-- Tabellen -->
+            <div class="col-md-6">
+                <h3>Gestreifte Tabelle mit Hover</h3>
+                <table class="table table-hover table-striped">
+                    <tr>
+                        <th>Bundesland</th>
+                        <th>Hauptstadt</th>
+                    </tr>
+                    <tr>
+                        <td>Steiermarkt</td>
+                        <td>Graz</td>
+                    </tr>
+                    <tr>
+                        <td>Oberösterreich</td>
+                        <td>linz</td>
+                    </tr>
+                    <tr>
+                        <td>Tirol</td>
+                        <td>Innsbruck</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- Ende Tabellen -->
+        </div>
+        <!-- Buttons -->
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Eifache Button</h2>
+                <button type="button" class="btn btn-success">Primary</button>
+                
+                <h2>Outline Button</h2>
+                <button type="button" class="btn btn-outline-danger">Primary</button>
+
+            </div>
+        
+        
+            <div class="col-md-4">
+                <h2>Gruppierte Buttons</h2>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary">Word</button>
+                    <button type="button" class="btn btn-success">Excel</button>
+                    <button type="button" class="btn btn-warning">PowerPoint</button>
+                    <button type="button" class="btn btn-danger">Advanced</button>
+                </div>
+                <h2>Gruppierte Outline-Buttons</h2>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-primary">Word</button>
+                    <button type="button" class="btn btn-outline-success">Excel</button>
+                    <button type="button" class="btn btn-outline-warning">PowerPoint</button>
+                    <button type="button" class="btn btn-outline-danger">Advanced</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h2 Blockbuttons="">Blockbuttons</h2>
+                <button type="button" class="btn btn-block btn-primary">Prinary</button>
+                <h2 Blockbuttons="">Outline-Blockbuttons</h2>
+                <button type="button" class="btn btn-block btn-outline-warning">Warning</button>
+            </div>
+        </div>
+        <!-- Ende Buttons -->
+        <!-- Fortschrittsbalken -->
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Gestapelter Fortschrittsbalken</h3>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar bg-success " style="width:50%"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar bg-warning " style="width:30%"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar bg-danger  " style="width:10%"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <h3>Animierte Fortschrittsbalken</h3>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary " style="width:80%"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Ende Fortschrittsbalken -->
+</body>
+
+</html>

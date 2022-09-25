@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Formatiert alle Elemente mit einem title-Attribut */
+        [title]{
+            font: bold 16pt verdana;
+        }
+        /* Formatiert alle p-Element mit einem title-Attribut */
+        p[title]{
+            text-decoration:underline;
+        }
+        /* Formatiert alle Element deren title-Attribut EXAKT "Heute ist Donnerstag " lautet */
+        [title="Heute ist Donnerstag"]{
+            color: red;
+        }
+        /* Formatiert alle Elemente deren title-Attribut begint */
+        [title^="Heute"]{
+            font-family: "Courier New";
+        }
+        /* Formatiert alle Elemente deren title-Attribut endet */
+
+        [title$="Heute"]{
+            color: royalblue;
+        }
+        /* Formatiert alle Elemente deren title-Attribut das Wort "Heute" beinhaltet */
+
+        [title*="Heute"]{
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <p title="Heute ist Donnerstag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem id eos facere assumenda consequuntur, eum provident? Minima laborum, quaerat omnis perspiciatis blanditiis cupiditate necessitatibus nam eaque pariatur enim, asperiores velit!</p>
+    <p>Quas, asperiores recusandae tempora maiores aliquam dicta dolor doloribus at vel beatae cumque reiciendis cum, tempore repellat ipsam odio quos vitae ratione ut nam, eaque unde minus accusantium! Architecto, id.</p>
+    <p title="Heute ist Donnerstag">Dolor neque itaque iste quia, minus officiis distinctio quas est incidunt eveniet, dolorem labore nam asperiores ea saepe qui, libero perferendis illo quod ipsum nostrum vel. Quasi, atque! Aliquid, recusandae!</p>
+    <p title="Donnerstag ist Heute">Aperiam sit saepe commodi placeat velit corporis accusamus, doloribus quis. Vel, eum eos? Porro, reprehenderit? Doloremque dolores totam soluta assumenda quaerat fuga dolorum excepturi expedita. Voluptas molestiae mollitia est harum!</p>
+    <p title="ist Donnerstag Heute">Sit enim dolorum blanditiis debitis, quia hic soluta consequuntur neque maiores aliquid amet, ut fugiat culpa? Eum minus repudiandae unde illum, voluptatem accusamus exercitationem veniam reiciendis harum sint facilis id?</p>
+</body>
+</html>

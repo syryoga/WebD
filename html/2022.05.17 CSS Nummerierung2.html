@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nummerierung</title>
+    <style> 
+    
+    body{
+        counter-reset: bundesland;
+        
+    }
+
+    h1::before{
+        counter-increment: bundesland;
+        content: counter(bundesland)'. ';
+        color: red;
+    }
+
+    h1{
+        counter-reset: viertel;
+
+    }
+    h2::before{
+        counter-increment: viertel;
+        content: counter(bundesland)'.'counter(viertel)'. ';
+        color:royalblue;
+    }
+    </style>
+</head>
+<body>
+    <h1>Oberösterreich</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta consectetur, perferendis vero accusamus quae quo quidem praesentium aliquid maiores.</p>
+    <h2>Innviertel</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta consectetur, perferendis vero accusamus quae quo quidem praesentium aliquid maiores.</p>
+    <h2>Mühlviertel</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta consectetur, perferendis vero accusamus quae quo quidem praesentium aliquid maiores.</p>
+    <h2>Traunviertel</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta consectetur, perferendis vero accusamus quae quo quidem praesentium aliquid maiores.</p>
+    <h2>Hausruckviertel</h2>
+    <h1>Niederösterreich</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta consectetur, perferendis vero accusamus quae quo quidem praesentium aliquid maiores.</p>
+    <h2>Mostviertel</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta consectetur, perferendis vero accusamus quae quo quidem praesentium aliquid maiores.</p>
+    <h2>Weinviertel</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta consectetur, perferendis vero accusamus quae quo quidem praesentium aliquid maiores.</p>
+    <h2>Waldviertel</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta consectetur, perferendis vero accusamus quae quo quidem praesentium aliquid maiores.</p>
+    <h2>Industrieviertel</h2>
+</body>
+</html>

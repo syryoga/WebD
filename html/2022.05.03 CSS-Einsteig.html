@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Einstieg</title>
+
+    <link rel="stylesheet" href="../css/formate.css">
+    <style>
+        /*  CSS-Kommentar */
+        /* Elementformatierung */
+        h1{color: red;}
+
+        /* Formatierung mehrerer Elemente */
+        h1,h2, p{
+            font-family: Verdana;
+        }
+        /* Eine Klasse begint mit einem Punkt und kann im Dokument beliebig oft verwendet werden, auf Groß und Kleinschreibung muss geachet werder(Case-Sensitive) */
+
+        .schinagl{
+            /* Textunterstreichung */
+            text-decoration: underline;
+        }
+        /* Anlegen mehrerer Klassen gleichzeitig */
+        .peter,.andreas{
+            /* Hintergrundfarbe */
+            background-color: gold;
+
+            /* Schtiftfarbe */
+            color: maroon;
+        }
+        /* Klasse gilt ausschließlich für h2-Elemente */
+        h2.pascal{
+                font-size: 36pt;
+            }
+
+            #jeremic{
+                /* Schriften welche aus 2 Wörter bestehen müssen in Anführungszeichen angegeben werden */
+                font-family: 'Courier New';
+            }
+
+    </style>
+</head>
+<body>
+    <!-- CSS inline-Style Formatierung -->
+    <h1 style="color: red;">Heute ist ein schöner Tag um CSS zu lernen</h1>
+
+    <!-- Anwenden der Klasse Schinagl -->
+    <h1 class="schinagl">Heute ist ein schöner Tag um CSS zu lernen</h1>
+    <h2 class="pascal">Heute ist ein schöner Tag um CSS zu lernen</h2>
+    <p class="pascal schinagl">Heute ist ein schöner Tag um CSS zu lernen</p>
+
+    <!-- Anwenden der Klasse Schinagl -->
+    <p class="schinagl peter">Heute ist ein schöner Tag um CSS zu lernen</p>
+
+    <p class="peter">Heute ist ein schöner Tag um CSS zu lernen</p>
+
+    <!-- Klasse Schinagl wird nicht angewendet da Anfangsbuchtabe nicht Klein geschrieben wurde -->
+    <p class="Schinagl">Heute ist ein schöner Tag um CSS zu lernen</p>
+
+    <!-- h1#jeremic.andreas>lorem5 -->
+    <h1 id="jeremic" class="andreas">Lorem ipsum dolor sit amet.</h1>
+    
+
+
+    <h1 class="schinagl andreas peter" id="jeremic">Lorem ipsum dolor sit amet.</h1>
+
+
+   
+</body>
+</html>

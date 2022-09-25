@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- das ist ein Komentar -->
+  <title>Einstig in HTML</title>
+</head>
+
+<body>
+
+  <a href="#unten" id="oben">Hier ist Oben, ab nach Unten</a>
+  <!-- Überschriften h1 ist die Größte und h6 die kleinste Überschrift -->
+  <h1>Heute ist Dienstag</h1>
+  <h3>Heute ist Dienstag</h3>
+  <h6>Heute ist Dienstag</h6>
+  <!-- Horisontale Trennlinie -->
+  <hr />
+  <h1>Absatz</h1>
+  <!-- p>lorem100 -->
+  <p>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    <br /><!-- br bewirkt einen Zeilenumbruch -->
+    <br /><!-- br bewirkt einen Zeilenumbruch -->
+    <!-- b Element stellt den Text Fett dar -->
+    <b>
+      Autem vel laboriosam labore saepe deleniti itaque! Dolorum ullam rerum
+      sapiente consequatur consectetur fuga cupiditate, incidunt repellat odit
+      porro ad deserunt pariatur sint in culpa saepe omnis eveniet?
+      Repellendus, optio animi mollitia ut id numquam ipsum
+    </b>
+    <br />
+    <br />
+    <i>
+      laborum provident doloremque debitis maiores impedit distinctio neque
+      odio incidunt deserunt dicta exercitationem recusandae totam perferendis
+      omnis praesentium? Magni, natus qui
+    </i>
+    <br />
+    <br />
+    <!-- stellt den Text durchgestrichen dar -->
+    <del>
+      possimus repudiandae vel aut atque inventore! Adipisci, earum veniam
+      eveniet nisi perspiciatis
+    </del>
+    <br /><br />
+    <!-- stellt den Text unterstrichen dar  -->
+    <u>
+      aperiam repellat eius facilis hic, q Lorem ipsum dolor sit amet
+      consectetur, adipisicing elit. Assumenda eum eligendi ipsum obcaecati
+      eaque
+    </u>
+    <br /><br />
+    <!-- mark => Tecthervorhebung -->
+    <mark>
+      ipsam modi illum veniam ex porro reiciendis molestiae, nobis cupiditate
+      natus doloribus aliquid sequi blanditiis. Eligendi excepturi minus
+      placeat hic blanditiis aut possimus delectus perferendis quo, quaerat
+      ea, maiores voluptatum repudiandae ad magni ratione, illo eaque cumque
+      eius. Consequuntur
+    </mark>
+    <br /><br />
+    <!-- Tiefgestellter Text -->
+    <sub> tenetur optio molestias, ab doloribus quas,</sub>
+
+    <!-- Hochgestellter Text -->
+    <sup>
+      quisquam, sunt dignissimos iusto rem natus neque. Eligendi consequatur
+      porro esse, adipisci fugit quas aspernatur accusantium corporis, labore
+      doloribus itaque dolorum voluptatum
+    </sup>
+    numquam magnam excepturi dolor consequuntur alias. Eos quaerat quam, ipsam
+    assumenda voluptatem nihil harum dolores excepturi optio tempore iste!
+    uibusdam a debitis! Perspiciatis, odio, nobis repellat est iure ipsam
+    maxime odit velit consequuntur nostrum maiores accusantium veritatis.
+  </p>
+  <hr />
+  <!-- h1{Bilder einbinden} -->
+  <h1>Bilder einbinden</h1>
+  <br /><br />
+  <!-- <img src="../images/Landschaft.bmp" alt="" width="300px"> --so nicht machen!!! -->
+  <img src="../images/Landschaft_Klein.bmp" alt="Insel" />
+
+  <h2>Bild mit Hyperlink</h2>
+  <a href="https://www.bbrz.at/" target="_blank">
+  <img src="../images/bbrz.png" alt="bbrz - logo">
+  </a>
+
+
+
+  <hr />
+  <h1>Listen</h1>
+  <h2>Sortierte Liste</h2>
+
+  <!-- ol>li*4 -->
+  <!-- ol[start=10]>li*4 -->
+  <ol>
+    <!-- ol mögliche Attribute: start -->
+    <li>Wien</li>
+    <li>Linz</li>
+    <li>Graz</li>
+    <li>Salzburg</li>
+  </ol>
+
+  <h2>Unsortierte Liste</h2>
+  <ul>
+    <li>Wien</li>
+    <li>Linz</li>
+    <li>Graz</li>
+    <li>Salzburg</li>
+  </ul>
+  <h2>Versschlachtete Liste</h2>
+
+  <ul>
+    <li>
+      Kaffee
+      <ul>
+        <li>Grosser Brauner</li>
+        <li>Melange</li>
+        <li>Mocca</li>
+        <li>Kleiner Brauner</li>
+      </ul>
+    </li>
+    <li>
+      Liminade
+      <ul>
+        <li>Cola</li>
+        <li>Fant</li>
+        <li>Sprite</li>
+        <li>Gröbl</li>
+      </ul>
+    </li>
+    <li>
+      Biere
+      <ul>
+        <li>Gösser</li>
+        <li>Zipfer</li>
+        <li>Uttendorfer</li>
+        <li>Stiegl</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>Definitionsliste</h2>
+
+  <!-- dl>(dt+dd)*2 -->
+  <dl>
+    <dt>IT - AP14</dt>
+    <dd>Ist eine Applikationsentwickler Klasse</dd>
+
+    <dt>IT - ST14</dt>
+    <dd>Ist eine Systemtechniker Klasse</dd>
+  </dl>
+
+  <h2>Hyperlink</h2>
+  <a href="tttp://www.wien.gv.at">Zur Webseite der Satdt Wien(im selben Tab)</a>
+  <br>
+  <a href="tttp://www.wien.gv.at" target="_blank">Zur Webseite der Satdt Wien(im selben Tab)</a>
+  <br>
+
+  <a href="mailto:schijkngl@gmail.com">schick mir eine E-Mail</a>
+
+  <a href="mailto:schijkngl@gmail.com?cc=syryoga1@gmail.com&bcc=lsdfsdkfj@yahoo.com">schick uns eine E-Mail</a><br>
+
+  <a href="mailto:schijkngl@gmail.com?subjekt=Party">schick uns eine E-Mail</a><br>
+
+  <a href="mailto:syryoga1@gmail.com?subjekt=Party&body=ich%20komme%20zur%20Party"></a><br>
+
+  <a href="link.html" target="_blank">Zum Kasperl</a>
+  <br>
+  <a href="#oben" id="unten">Hier ist Unten, ab nach Oben</a>
+  <br>
+
+
+
+  <div style="margin-bottom: 2000px"></div>
+</body>
+
+</html>

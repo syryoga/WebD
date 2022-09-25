@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .jumbotron {
+            background-color: maroon;
+            color: gold;
+            text-align: center;
+            text-decoration: underline;
+        }
+        .container {
+            margin-bottom: 100px;
+        }
+        .row {
+            margin-bottom: 50px;
+        }
+        .dropdown-divider {
+            border-color: maroon;
+            border-width: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- .container>.row>.col-md-12>.jumbotron>h1.display-1{Bootstrap} -->
+    <div class="container-fluid">
+        <!-- 1.Zeile -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1 class="display-1">Bootstrap-Buttons</h1>
+                </div>
+            </div>
+        </div>
+        <!-- 1.Zeile -->
+        <!-- 2. Zeile -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Butonns</h2>
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+            </div>
+            <div class="col-md-6">
+                <h2>Outline-Buttons</h2>
+                <button type="button" class="btn btn-outline-primary">Primary</button>
+                <button type="button" class="btn btn-outline-success">Success</button>
+                <button type="button" class="btn btn-outline-warning">Warning</button>
+                <button type="button" class="btn btn-outline-danger">Danger</button>
+            </div>
+        </div>
+        <!-- 2. Zeile -->
+        <!-- 3. Zeile -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Buttongrößen</h2>
+                <button type="button" class="btn btn-primary btn-sm">Klein</button>
+                <button type="button" class="btn btn-warning ">Standard</button>
+                <button type="button" class="btn btn-danger btn-lg">groß</button>
+            </div>
+            <div class="col-md-6">
+                <h2>Buttongrößen</h2>
+                <button type="button" class="btn btn-outline-primary btn-sm">Klein</button>
+                <button type="button" class="btn btn-outline-warning ">Standard</button>
+                <button type="button" class="btn btn-outline-danger btn-lg">groß</button>
+            </div>
+        </div>
+        <!-- 3. Zeile -->
+        <!-- 4. Zeile -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2 Blockbuttons="">Blockbuttons</h2>
+                <button type="button" class="btn btn-block btn-primary">Prinary</button>
+                <button type="button" class="btn btn-block btn-warning">Warning</button>
+                <button type="button" class="btn btn-block btn-danger">Danger</button>
+            </div>
+            <div class="col-md-6">
+                <h2 Blockbuttons="">Outline-Blockbuttons</h2>
+                <button type="button" class="btn btn-block btn-outline-primary">Prinary</button>
+                <button type="button" class="btn btn-block btn-outline-warning">Warning</button>
+                <button type="button" class="btn btn-block btn-outline-danger">Danger</button>
+            </div>
+        </div>
+        <!-- 4. Zeile -->
+        <!-- 5. Zeile -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Gruppierte Buttons</h2>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-success">Success</button>
+                    <button type="button" class="btn btn-warning">Warning</button>
+                    <button type="button" class="btn btn-danger">Danger</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>Gruppierte Outline-Buttons</h2>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-primary">Primary</button>
+                    <button type="button" class="btn btn-outline-success">Success</button>
+                    <button type="button" class="btn btn-outline-warning">Warning</button>
+                    <button type="button" class="btn btn-outline-danger">Danger</button>
+                </div>
+            </div>
+        </div>
+        <!-- 5. Zeile -->
+        <!-- 6. Zeile -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Vertical Gruppierte Buttons</h2>
+                <div class="btn-group-vertical">
+                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-success">Success</button>
+                    <button type="button" class="btn btn-warning">Warning</button>
+                    <button type="button" class="btn btn-danger">Danger</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>Vertical Gruppierte Outline-Buttons</h2>
+                <div class="btn-group-vertical">
+                    <button type="button" class="btn btn-outline-primary">Primary</button>
+                    <button type="button" class="btn btn-outline-success">Success</button>
+                    <button type="button" class="btn btn-outline-warning">Warning</button>
+                    <button type="button" class="btn btn-outline-danger">Danger</button>
+                </div>
+            </div>
+        </div>
+        <!-- 6. Zeile -->
+        <!-- 7. Zeile -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>DropDOWN</h2>
+                <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" id="dropdown"
+                        data-toggle="dropdown">Klick mich</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">Bootstrap</a>
+                        <a class="dropdown-item" href="#">XML</a>
+                        <a class="dropdown-item" href="#">JavaScript</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>DropDOWN</h2>
+                <div class="dropdown">
+                    <button type="button" class="btn btn-outline-primary dropdown-toggle" id="dropdown"
+                        data-toggle="dropdown">Klick mich</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">Bootstrap</a>
+                        <a class="dropdown-item" href="#">XML</a>
+                        <a class="dropdown-item" href="#">JavaScript</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 7. Zeile -->
+        <!-- 8. Zeile -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>DropUP</h2>
+                <div class="dropup">
+                    <button type="button" class="btn btn-warning dropdown-toggle" id="dropdown"
+                        data-toggle="dropdown">Klick mich</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">Bootstrap</a>
+                        <a class="dropdown-item" href="#">XML</a>
+                        <a class="dropdown-item" href="#">JavaScript</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>DropUP</h2>
+                <div class="dropup">
+                    <button type="button" class="btn btn-outline-warning dropdown-toggle" id="dropdown"
+                        data-toggle="dropdown">Klick mich</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">Bootstrap</a>
+                        <a class="dropdown-item" href="#">XML</a>
+                        <a class="dropdown-item" href="#">JavaScript</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 8. Zeile -->
+        <!-- 9. Zeile -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>DropLEFT</h2>
+                <div class="dropleft">
+                    <button type="button" class="btn btn-success dropdown-toggle" id="dropdown"
+                        data-toggle="dropdown">Klick mich</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">Bootstrap</a>
+                        <a class="dropdown-item" href="#">XML</a>
+                        <a class="dropdown-item" href="#">JavaScript</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>DropLEFT</h2>
+                <div class="dropleft">
+                    <button type="button" class="btn btn-outline-success dropdown-toggle" id="dropdown"
+                        data-toggle="dropdown">Klick mich</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">Bootstrap</a>
+                        <a class="dropdown-item" href="#">XML</a>
+                        <a class="dropdown-item" href="#">JavaScript</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 9. Zeile -->
+        <!-- 10. Zeile -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>DropRIGHT</h2>
+                <div class="dropright">
+                    <button type="button" class="btn btn-danger dropdown-toggle" id="dropdown"
+                        data-toggle="dropdown">Klick mich</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">Bootstrap</a>
+                        <a class="dropdown-item" href="#">XML</a>
+                        <a class="dropdown-item" href="#">JavaScript</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>DropRIGHT</h2>
+                <div class="dropright">
+                    <button type="button" class="btn btn-outline-danger dropdown-toggle" id="dropdown"
+                        data-toggle="dropdown">Klick mich</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">Bootstrap</a>
+                        <a class="dropdown-item" href="#">XML</a>
+                        <a class="dropdown-item" href="#">JavaScript</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 10. Zeile -->
+        <!-- 11. Zeile -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>DropDOWN mit Trennlinie</h2>
+                <div class="dropdown">
+                    <button type="button" class="btn btn-info dropdown-toggle" id="dropdown"
+                        data-toggle="dropdown">Klick mich</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">Bootstrap</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">XML</a>
+                        <a class="dropdown-item" href="#">JavaScript</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>DropDOWN mit Trennlinie</h2>
+                <div class="dropdown">
+                    <button type="button" class="btn btn-outline-info dropdown-toggle" id="dropdown"
+                        data-toggle="dropdown">Klick mich</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">Bootstrap</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">XML</a>
+                        <a class="dropdown-item" href="#">JavaScript</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 11. Zeile -->
+        <!-- 12. Zeile -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Dropdown-Splitbutton</h2>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary">Webdesign</button>
+                    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">Bootstrap</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">XML</a>
+                        <a class="dropdown-item" href="#">JavaScript</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>Dropdown-Splitbutton</h2>
+                <div class="btn-group">
+                <button type="button" class="btn btn-outline-success">Webdesign</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">Bootstrap</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">XML</a>
+                        <a class="dropdown-item" href="#">JavaScript</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- 12. Zeile -->
+        <!-- 13. Zeile -->
+        <!-- .row>.col-md-6>h2{Grow-Buttons}+button[type=button].btn.btn-primary -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Grow-Buttons</h2>
+                <button type="button" class="btn btn-primary">
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>...Laden
+                </button>
+                <button type="button" class="btn btn-warning">
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>...Laden
+                </button>
+                <button type="button" class="btn btn-danger">
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>...Laden
+                </button>
+                <button type="button" class="btn btn-success">
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>...Laden
+                </button>
+            </div>
+            <div class="col-md-6">
+                <h2>Grow-Buttons</h2>
+                <button type="button" class="btn btn-outline-primary">
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>...Laden
+                </button>
+                <button type="button" class="btn btn-outline-warning">
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>...Laden
+                </button>
+                <button type="button" class="btn btn-outline-danger">
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>...Laden
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>...Laden
+                </button>
+            </div>
+        </div>
+        <!-- 13. Zeile -->
+        <!-- 14. Zeile -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Grow-Buttons</h2>
+                <button type="button" class="btn btn-primary">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>...Laden
+                </button>
+                <button type="button" class="btn btn-warning">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>...Laden
+                </button>
+                <button type="button" class="btn btn-danger">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>...Laden
+                </button>
+                <button type="button" class="btn btn-success">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>...Laden
+                </button>
+            </div>
+            <div class="col-md-6">
+                <h2>Grow-Buttons</h2>
+                <button type="button" class="btn btn-outline-primary">
+                    <span class="sspinner-border spinner-border-sm" role="status" aria-hidden="true"></span>...Laden
+                </button>
+                <button type="button" class="btn btn-outline-warning">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>...Laden
+                </button>
+                <button type="button" class="btn btn-outline-danger">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>...Laden
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>...Laden
+                </button>
+            </div>
+        </div>
+    </div>
+        <!-- 14. Zeile -->
+        <!-- Container-Ende -->
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

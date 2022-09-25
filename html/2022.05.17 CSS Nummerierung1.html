@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+            counter-reset: bundesland;
+            
+        }
+
+        h1::before{
+            counter-increment: bundesland;
+            /* content: counter(bundesland, upper-roman)' '; */
+            content: counter(bundesland)'. ';
+            color: red;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Wien</h1>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, voluptatibus? Adipisci dolorem officiis ipsam optio at nesciunt quisquam, accusamus neque.</div>
+    <h1>Steiermarkt</h1>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, voluptatibus? Adipisci dolorem officiis ipsam optio at nesciunt quisquam, accusamus neque.</div>
+    <h1>Oberösterreich</h1>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, voluptatibus? Adipisci dolorem officiis ipsam optio at nesciunt quisquam, accusamus neque.</div>
+    <h1>Niederösterreich</h1>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, voluptatibus? Adipisci dolorem officiis ipsam optio at nesciunt quisquam, accusamus neque.</div>
+    <h1>Wien</h1>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, voluptatibus? Adipisci dolorem officiis ipsam optio at nesciunt quisquam, accusamus neque.</div>
+    <h1>Steiermarkt</h1>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, voluptatibus? Adipisci dolorem officiis ipsam optio at nesciunt quisquam, accusamus neque.</div>
+    <h1>Oberösterreich</h1>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, voluptatibus? Adipisci dolorem officiis ipsam optio at nesciunt quisquam, accusamus neque.</div>
+    <h1>Niederösterreich</h1>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, voluptatibus? Adipisci dolorem officiis ipsam optio at nesciunt quisquam, accusamus neque.</div>
+</body>
+</html>

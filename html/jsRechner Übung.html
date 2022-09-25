@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Grundrechenarten</title>
+    <style>
+        .formatierung {
+            border: 3px solid rgb(105, 0, 0);
+            width: 500px;
+
+            margin: auto;
+            margin-top: 50px;
+            padding: 10px;
+            text-align: center;
+
+            font-weight: bold;
+            font-size: 14pt;
+            color: rgb(124, 6, 6);
+            background-color: silver;
+        }
+
+        [type="text"] {
+            font-size: 24pt;
+            text-align: center;
+            padding: 20px;
+            margin: 5px;
+        }
+
+        [id="ausgabe"] {
+            background-color: yellow;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function add() {
+            var x = parseFloat(document.getElementById("z1").value);
+            var y = parseFloat(document.getElementById("z2").value);
+            document.getElementById("ausgabe").value = x + y;
+        };
+        function sub() {
+            var x = parseFloat(document.getElementById("z1").value);
+            var y = parseFloat(document.getElementById("z2").value);
+            document.getElementById("ausgabe").value = x - y;
+        };
+        function mult() {
+            var x = parseFloat(document.getElementById("z1").value);
+            var y = parseFloat(document.getElementById("z2").value);
+            document.getElementById("ausgabe").value = x * y;
+        };
+        function div() {
+            var x = parseFloat(document.getElementById("z1").value);
+            var y = parseFloat(document.getElementById("z2").value);
+            document.getElementById("ausgabe").value = x / y;
+        };
+        // kurze version
+        {
+
+            // function add(){
+            //     ausgabe.value = z1.value + z2.value;
+            // };
+            // function sub(){
+            //     ausgabe.value = z1.value - z2.value;
+            // };
+            // function mult(){
+            //     ausgabe.value = z1.value * z2.value;
+            // };
+            // function div(){
+            //     ausgabe.value = z1.value / z2.value;
+            // };
+        }
+
+        // switch (elem.value) {
+        //     case 'Addieren':
+        //         ausgabe.value = parseFloat(z1.value) + parseFloat(z2.value);
+        //         break;
+        //     case 'Subtrahieren':
+        //         ausgabe.value = parseFloat(z1.value) - parseFloat(z2.value);
+        //         break;
+        //     case 'Multiplizieren':
+        //         ausgabe.value = parseFloat(z1.value) * parseFloat(z2.value);
+        //         break;
+        //     case 'Dividieren':
+        //         ausgabe.value = parseFloat(z1.value) / parseFloat(z2.value);
+        //         break;
+        // }
+
+
+        // if(elem==1){
+        //     ausgabe.value = parseFloat(z1.value) + parseFloat(z2.value);
+        // }
+        // if(elem==2){
+        //     ausgabe.value = parseFloat(z1.value) - parseFloat(z2.value);
+        // }
+        // if(elem==3){
+        //     ausgabe.value = parseFloat(z1.value) * parseFloat(z2.value);
+        // }
+        // if(elem==4){
+        //     ausgabe.value = parseFloat(z1.value) / parseFloat(z2.value);
+        // }
+
+        // if(elem=="add"){
+        //     ausgabe.value = parseFloat(z1.value) + parseFloat(z2.value) /*|| "Ungültige Eingabe..."*/;
+        // }
+        // if(elem=="sub"){
+        //     ausgabe.value = parseFloat(z1.value) - parseFloat(z2.value) /*|| "Ungültige Eingabe..."*/;
+        // }
+        // if(elem=="mul"){
+        //     ausgabe.value = parseFloat(z1.value) * parseFloat(z2.value) /*|| "Ungültige Eingabe..."*/;
+        // }
+        // if(elem=="div"){
+        //     ausgabe.value = parseFloat(z1.value) / parseFloat(z2.value) /*|| "Ungültige Eingabe..."*/;
+        // }
+        // }
+
+        function rechnen(elem) {
+            var zahl1 = z1.value;
+            var zahl2 = z2.value;
+
+            if (z1.value == "" && z2.value == "") {
+                ausgabe.value = "Beide Zahlen waren leer..."
+            }
+            else if (z1.value == "") {
+                ausgabe.value = "1 Zahl war leer..."
+            }
+            else if (z2.value == "") {
+                ausgabe.value = "2 Zahl war leer..."
+            }
+            else if (isNaN(zahl1) && isNaN(zahl2)) {
+                ausgabe.value = "Beides keine zahl"
+            }
+            else if (isNaN(zahl1)) {
+                ausgabe.value = "Eingabe 1 ist keine Zahl"
+            }
+            else if (isNaN(zahl2)) {
+                ausgabe.value = "Eingabe 2 ist keine Zahl"
+            }
+            
+            else{
+                switch (elem) {
+                case 'add':
+                    ausgabe.value = parseFloat(z1.value) + parseFloat(z2.value);
+                    break;
+                case 'sub':
+                    ausgabe.value = parseFloat(z1.value) - parseFloat(z2.value);
+                    break;
+                case 'mul':
+                    ausgabe.value = parseFloat(z1.value) * parseFloat(z2.value);
+                    break;
+                case 'div':
+                    ausgabe.value = parseFloat(z1.value) / parseFloat(z2.value);
+                    break;
+            }
+            }
+            
+        }
+    </script>
+</head>
+
+<body>
+    <div class="formatierung">
+        <h1>Berechnungen mittels JavaScript</h1>
+        <form>
+            <p>
+                <input type="text" placeholder="1. Zahl" id="z1" />
+                <input type="text" placeholder="2. Zahl" id="z2" />
+            </p>
+            <p>
+                <input onclick="add()" type="button" value="fx_Addieren" />
+                <input onclick="sub()" type="button" value="fx_Subtrahieren" />
+                <input onclick="mult()" type="button" value="fx_Multiplizieren" />
+                <input onclick="div()" type="button" value="fx_Dividieren" />
+            </p>
+            <!-- <p>
+                <input onclick="rechnen(this)" type="button" value="Addieren"/>
+                <input onclick="rechnen(this)" type="button" value="Subtrahieren" />
+                <input onclick="rechnen(this)" type="button" value="Multiplizieren" />
+                <input onclick="rechnen(this)" type="button" value="Dividieren"  />
+            </p>           
+            -->
+
+            <!-- <p>
+                <input onclick="rechnen(1)" type="button" value="Addieren"/>
+                <input onclick="rechnen(2)" type="button" value="Subtrahieren" />
+                <input onclick="rechnen(3)" type="button" value="Multiplizieren" />
+                <input onclick="rechnen(4)" type="button" value="Dividieren"  />
+            </p>           
+           
+            -->
+
+            <p>
+                <input onclick="rechnen('add')" type="button" value="Addieren" />
+                <input onclick="rechnen('sub')" type="button" value="Subtrahieren" />
+                <input onclick="rechnen('mul')" type="button" value="Multiplizieren" />
+                <input onclick="rechnen('div')" type="button" value="Dividieren" />
+            </p>
+
+
+            <p>
+                <input id="ausgabe" type="text" placeholder="Ergebnis" disabled />
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>

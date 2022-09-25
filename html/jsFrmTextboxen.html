@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/jsFormatierungen.css">
+    <script src="../js/jsFunctionen.js"></script>
+    <script>
+        function check(){
+            //1.Möglichkeit
+            // var vn=document.getElementById("Vorname").value;
+            // var nn=document.getElementById("Nachname").value;
+
+            //2.Möglichkeit
+            // var vn=document.daten.Vorname.value;
+            // var nn=document.daten.Nachname.value;
+
+            //3.Möglichkeit
+            // var vn=document.daten.elements[0].value;
+            // var nn=document.daten.elements[1].value;
+
+            //4.Möglichkeit
+            var vn=document.forms[0].elements[0].value;
+            var nn=document.forms[0].elements[1].value;
+
+            // 5.Möglichkeit
+            // var vn = Vorname.value;
+            // var nn = Nachname.value;
+
+            // ausgabe(vn+" "+nn);
+            // Ausgabe.value = vn+" "+nn;
+            document.forms[0].elements[2].value=vn+" "+nn;
+        }
+    </script>
+</head>
+<body>
+    <form name="daten">
+        <table>
+            <tr>
+                <td>Vorname</td>
+                <td><input type="text" id="Vorname"></td>
+            </tr>
+            <tr>
+                <td>Nachname</td>
+                <td><input type="text" id="Nachname"></td>
+            </tr>
+            <tr>
+                <td>Ausgabe</td>
+                <td><input type="text" id="Ausgabe"></td>
+            </tr>
+        </table>
+    </form>
+    <button onclick="check()">Klick mich</button>
+    <div id="ausgabe1"></div>
+</body>
+</html>

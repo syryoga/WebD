@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        #ausgabe{
+            background-color: gold;
+            color: maroon;
+            bottom: 5px solid maroon;
+            padding: 10px;
+            font:bold 16pt verdana;
+        }
+    </style>
+    <script>
+        function check(){
+            //Einzeilge Kommentar
+            /*
+             Blockkommentar
+            */
+
+            //Einfaches ausgabefernster
+            //alert("Guten Morgen, AP14")
+
+            //prompt => Ausgabe - /Eingabedialog
+            // - ist ein Zuweisungsoperator
+            var namen = prompt("Geben Sie ihren Namen ein");
+
+            document.getElementById("ausgabe").innerHTML="Guten Morgen " + namen;
+
+
+        }
+    </script>
+</head>
+<body>
+    <div id="ausgabe"></div>
+    <button>Hallo</button>
+</body>
+</html>

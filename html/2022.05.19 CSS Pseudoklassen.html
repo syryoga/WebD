@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* unbesuchter Link */
+        a:link{
+            font:bold 24pt verdana;
+            color: maroon;
+        }
+        /* besuchter Link */
+        a:visited{
+            color: red;
+        }
+        /* Maouseover */
+        a:hover{
+            color: magenta;
+        }
+        /* Aktivierter Link */
+        a:active{
+            color: lime;
+        }
+        p{
+            font:bold 14pt verdana;
+        }
+        /* Formatiert alle ungeraden p-Elemente */
+        /* p:nth-of-type(odd){
+            color:red;
+        } */
+
+        /* Formatiert alle geraden p-Elemente */
+        /* p:nth-of-type(even){
+            color:red;
+        } */
+        
+        /* Formatiert das 2. p-Elemente */
+        /* p:nth-of-type(2){
+            color:red;
+        } */
+        
+        /* Formatiert jede 3. p-Elemente */
+        /* p:nth-of-type(3n){
+            color:red;
+        } */
+        
+        /* Formatiert jede 3. begiennend mit dem 1 p-Elemente */
+        p:nth-of-type(3n + 1){
+            color:lime;
+        }
+
+        /* Formatiert verpflichtende Eingabefelder */
+        input:required{
+            border: 3px solid red;
+        }
+        /* Formatiert optionale Eigabefelder */
+        input:optional{
+            border:3px solid green;
+        }
+        /*Formatiert leere Eigabefelder  */
+        input:empty{
+            background: hotpink;
+        }
+        /* Formatiert ausgewälhlte Eingabefelder */
+        input:focus{
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td>Vorname</td>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Strasse</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>PLZ</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Ort</td>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+    </form>
+    <a href="http://google.at" target="_blank">Suchmaschine </a>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem sed laboriosam corporis asperiores tenetur, quis similique, architecto ab deleniti totam dolorum dolor obcaecati aspernatur et quasi recusandae. Ab, maiores maxime?</p>
+    <p>Iure minus dignissimos odio nostrum unde neque, iusto maxime a illum eum optio consequuntur, quae praesentium ullam tenetur labore earum quibusdam! Aut deserunt fuga repellendus eius officia! Quia, quis sit.</p>
+    <p>Ducimus expedita eligendi voluptatum nulla veritatis dolorum quisquam, maxime, voluptate vero tempore quibusdam repudiandae? Perspiciatis eos necessitatibus repellendus optio natus, molestiae vitae nam possimus fugiat blanditiis, vero maiores? Sequi, commodi!</p>
+    <p>Nostrum obcaecati rerum deserunt. Hic mollitia, officia fugiat porro harum doloremque assumenda nobis temporibus totam expedita ea est cupiditate. Similique aliquid quas minus, porro consequuntur ipsa minima esse repellat nam.</p>
+    <p>Fuga voluptates repellat accusamus laudantium consequatur labore est in minima rerum vitae, libero deleniti adipisci id natus quos cupiditate voluptatem enim quis alias at. Tenetur eius accusamus quisquam numquam amet.</p>
+    <p>Molestiae itaque iusto est ipsam quam aspernatur blanditiis, ipsa, vero tempora quia dolorum distinctio harum eveniet repellat placeat enim similique iste sequi. Ratione suscipit aut soluta? Fugit eum repudiandae fuga.</p>
+    <p>Dolores, minima suscipit! Numquam illo hic porro obcaecati doloribus architecto non sapiente cupiditate quas. Voluptates quos tempora iusto sequi accusantium voluptate reprehenderit aperiam, necessitatibus quibusdam dicta repudiandae. Voluptate, esse facilis.</p>
+    <p>Obcaecati dicta esse numquam modi enim! Facere velit, quisquam ducimus impedit sequi ut error itaque maiores dolorem animi nostrum dolores explicabo nulla aspernatur aliquid eveniet, non labore perferendis eligendi dignissimos?</p>
+    <p>Pariatur porro eos debitis ex. Consectetur laudantium minus pariatur ipsum expedita. Ducimus doloribus vero, aspernatur placeat vitae, ad minus qui, iusto voluptate eligendi illum error soluta nisi! Optio, similique aliquam?</p>
+    <p>Reiciendis nemo laborum in laudantium voluptatem amet, officia ex ea blanditiis voluptatibus eos velit culpa est et libero commodi sequi nostrum sint dolore sit! Veritatis labore doloribus debitis corporis ratione.</p>
+</body>
+</html>

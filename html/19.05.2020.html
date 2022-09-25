@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(144, 153, 173);
+        }
+        table,
+        th,
+        td {
+            width: 500px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+
+        .gelb {
+            background-color: rgb(173, 173, 5);
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <!--Begin einer Tabelle-->
+        <tr>
+            <!--Begin einer TabelleZeile-->
+
+            <th>Vorname
+                <!--Begin einer KopfZeile-->
+
+            </th>
+            <!--Ende einer KopfZeile-->
+            <th>Nachname</th>
+            <th>Ort</th>
+            <th>NAUB</th>
+        </tr>
+        <!--Begin einer TabelleZeile-->
+
+        <tr>
+            <td>Alois
+                <!--Begin einer Datenzeile-->
+
+            </td>
+            <!--Ende einer Datenzeile-->
+            <td>Frischauer</td>
+            <td>Wien</td>
+            <th>100</th>
+        </tr>
+
+        <tr>
+            <td>Max</td>
+            <td>Mustermann</td>
+            <td>Graz</td>
+            <th>100</th>
+        </tr>
+
+        <tr>
+            <td>Dejan</td>
+            <td>Jeremic</td>
+            <td>Wien</td>
+            <th>100</th>
+        </tr>
+    </table>
+    <!--Ende einer Tabelle-->
+
+    <br>
+
+    <table>
+        <tr>
+            <td></td>
+            <th class="gelb" colspan="3"> colspan = 3</th>
+            <td></td>
+
+        </tr>
+        <tr>
+            <th class="gelb" rowspan="3">rowspan = 3</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <p></p>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <th class="gelb" rowspan="2" colspan="2">ÜBUNG</th>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
