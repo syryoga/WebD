@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://tempuri.org/Kundenliste_Babuschka.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/Kundenliste_Babuschka.xsd"
+    xmlns:mstns="http://tempuri.org/Kundenliste_Babuschka.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+	<xs:element name="kundenliste">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name ="kunde" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="vorname" type="xs:string" maxOccurs="2"/>
+							<xs:element name="nachname" type="xs:string"/>
+							<xs:element name="alter">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+										<xs:minInclusive value="16"/>
+										<xs:maxInclusive value="60"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="adresse">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="strasse" type="xs:string"/>
+										<xs:element name="postleitzahl">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="[A][T]-[1-9][0-9]{3}"/>
+													<xs:pattern value="[D][E]-[0-9]{5}"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="ort" type="xs:string"/>
+										<xs:element name="bundesland">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="Wien"/>
+													<xs:enumeration value="Niederösterreich"/>
+													<xs:enumeration value="Oberösterreich"/>
+													<xs:enumeration value="Vorarlberg"/>
+													<xs:enumeration value="Kärnten"/>
+													<xs:enumeration value="Steiermakr"/>
+													<xs:enumeration value="Salzburg"/>
+													<xs:enumeration value="Tirol"/>
+													<xs:enumeration value="Burgenland"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="adressart" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Geschäftsadresse"/>
+												<xs:enumeration value="Rechnungsadresse"/>
+												<xs:enumeration value="Lieferadresse"/>
+												<xs:enumeration value="Privatadresse"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="geschlecht" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Mann"/>
+									<xs:enumeration value="Frau"/>
+									<xs:enumeration value="Inter"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="kundennummer" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:pattern value="[A-Z]{2}[0-9]{5}"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="kundenart" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Neukunde"/>
+									<xs:enumeration value="Kunde"/>
+									<xs:enumeration value="Stammkunde"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
