@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://serghei.org/Buecherliste.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://serghei.org/Buecherliste.xsd"
+    xmlns:mstns="http://serghei.org/Buecherliste.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+	<xs:element name="buecherliste">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="buch" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="titel" type="xs:string"/>
+							<xs:element name="verlag">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Heyne"/>
+										<xs:enumeration value="Rheinwerk"/>
+										<xs:enumeration value="Springer"/>
+										<xs:enumeration value="Manz"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="preis">
+								<xs:simpleType>
+									<xs:restriction base="xs:float">
+										<xs:minInclusive value="0.00"></xs:minInclusive>
+										<xs:maxInclusive value="4999.99"></xs:maxInclusive>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="isbn-10">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="[0-9]{10}"></xs:pattern>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="isbn-13">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="[0-9]{3}-[0-9]{10}"></xs:pattern>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="auflage">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+										<xs:minInclusive value="1"/>
+										<xs:maxInclusive value="20"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="erscheinungsjahr">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+										<xs:minInclusive value="1700"/>
+										<xs:maxInclusive value="2021"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="seiten" type="xs:int"></xs:element>
+							<xs:element name="autor"  maxOccurs="5">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="vorname"></xs:element>
+										<xs:element name="nachname"></xs:element>
+									</xs:sequence>
+									<xs:attribute name="geschlecht" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Mann"/>
+												<xs:enumeration value="Frau"/>
+												<xs:enumeration value="Inter"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="genre" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Krimi"/>
+									<xs:enumeration value="Computer"/>
+									<xs:enumeration value="Sachbuch"/>
+									<xs:enumeration value="Politik"/>
+									<xs:enumeration value="Kochbuch"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="status" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Verfügbar"/>
+									<xs:enumeration value="Verliehen"/>
+									<xs:enumeration value="Verloren"/>
+									<xs:enumeration value="Reparatour"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
