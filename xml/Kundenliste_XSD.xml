@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kundenliste xmlns="http://tempuri.org/Kundenliste.xsd">
+	<kunde geschlecht="Mann" kundenart="Stammkunde">
+		<vorname>string</vorname>
+		<nachname>string</nachname>
+		<alter>49</alter>
+		<adresse adressArt="Lieferadresse">
+			<strasse>string</strasse>
+			<postleitzahl>string</postleitzahl>
+			<ort>string</ort>
+			<bundesland>Salzburg</bundesland>
+		</adresse>
+	</kunde>
+</kundenliste>
