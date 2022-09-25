@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<buecherliste xmlns="http://serghei.org/Buecherliste.xsd">
+	<buch genre="Krimi" status="Verliehen">
+		<titel>Die Firma</titel>
+		<verlag>Heyne</verlag>
+		<preis>55</preis>
+		<isbn-10>1234567890</isbn-10>
+		<isbn-13>123-1234567890</isbn-13>
+		<auflage>5</auflage>
+		<erscheinungsjahr>1991</erscheinungsjahr>
+		<seiten>2</seiten>
+		<autor geschlecht="Mann">
+			<vorname>John</vorname>
+			<nachname>Grisham</nachname>
+		</autor>
+		<autor geschlecht="Frau">
+			<vorname>Eva</vorname>
+			<nachname>Hirscher</nachname>
+		</autor>
+	</buch>
+	<buch genre="Krimi" status="Verfügbar">
+		<titel>string</titel>
+		<verlag>Heyne</verlag>
+		<preis>float</preis>
+		<isbn-10>string</isbn-10>
+		<isbn-13>string</isbn-13>
+		<auflage>int</auflage>
+		<erscheinungsjahr>int</erscheinungsjahr>
+		<seiten>int</seiten>
+		<autor geschlecht="Mann">
+			<vorname>anyType</vorname>
+			<nachname>anyType</nachname>
+		</autor>
+	</buch>
+</buecherliste>
