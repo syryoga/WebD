@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fahrtenbuch xmlns="http://a.org/Fahrtenbuch.xsd">
+	<fahrt>
+		<datum>string</datum>
+		<fahrer geschlecht="Mann" personalnummer="string">
+			<vorname>Max</vorname>
+			<nachname>Muster</nachname>
+			<alter>65</alter>
+		</fahrer>
+		<von>Mittighofen</von>
+		<nach>Uttendorf</nach>
+		<uhrzeit>
+			<von>09:00:00</von>
+			<bis>09:15:00</bis>
+		</uhrzeit>
+		<kilometerstand>
+			<anfang>1015.5</anfang>
+			<ende>1021.6</ende>
+		</kilometerstand>
+		<fahrzeug kfzArt="SUV" kraftstoffart="Benzin" versicherung="Kasko" zustand="Reparatur">
+			<marke>BMW</marke>
+			<farbe>Rot</farbe>
+			<typ>string</typ>
+			<kenzeichen>string</kenzeichen>
+		</fahrzeug>
+	</fahrt>
+</fahrtenbuch>	 
