@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://serghei.org/Kundenliste.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://serghei.org/Kundenliste.xsd"
+    xmlns:mstns="http://serghei.org/Kundenliste.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+	<xs:element name="Kundenliste">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="kunde" type="kundeTyp"></xs:element>
+			</xs:sequence>
+			<xs:attribute name="kundenart" type="kundenartTyp" use="required"></xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:simpleType name="kundenartTyp">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Kunde"/>
+			<xs:enumeration value="Stamkunde"/>
+			<xs:enumeration value="Neukunde"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="kundeTyp">
+		<xs:sequence>
+			<xs:element name="vorname" maxOccurs="2" type="xs:string"></xs:element>
+			<xs:element name="nachname" type="xs:string"></xs:element>
+			<xs:element name="alter" type="alterTyp"></xs:element>
+			<xs:element name="adresse" type="adresseTyp"></xs:element>
+			<xs:element name="reise" type="reiseTyp"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="alterTyp">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="18"/>
+			<xs:maxInclusive value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="adresseTyp">
+		<xs:sequence>
+			<xs:element name="strasse"></xs:element>
+			<xs:element name="postleitzahl" type="plzTyp"></xs:element>
+			<xs:element name="ort"></xs:element>
+			<xs:element name="bundesland" type="bundeslandType"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="adressArt" type="adressArtType" use="required"/>
+	</xs:complexType>
+
+	<xs:simpleType name="adressArtType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Privatadresse"/>
+			<xs:enumeration value="Rechnungsadresse"/>
+			<xs:enumeration value="Geschäftsadresse"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="plzTyp">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[1-9][0-9]{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="bundeslandType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Wien"/>
+			<xs:enumeration value="Niederösterreich"/>
+			<xs:enumeration value="Burgenland"/>
+			<xs:enumeration value="Oberösterreich"/>
+			<xs:enumeration value="Kärnten"/>
+			<xs:enumeration value="Salzburg"/>
+			<xs:enumeration value="Tirol"/>
+			<xs:enumeration value="Steiermark"/>
+			<xs:enumeration value="Voralberg"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="reiseTyp">
+		<xs:sequence>
+			<xs:element name="reiseziel" type="reisezielTyp"></xs:element>
+			<xs:element name="reisedauer"></xs:element>
+			<xs:element name="verpflegung" type="verpflegungTyp"></xs:element>
+			<xs:element name="unterbringung" type="unterbringungTyp"></xs:element>
+			<xs:element name="preis" type="preisTyp"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="bezahlstatus" type="bezahlstatusTyp"/>
+		<xs:attribute name="bezahlart" type="bezahlartTyp"/>
+		<xs:attribute name="reiseversiecherung" type="reiseversiecherungTyp"/>
+		<xs:attribute name="buchungsnummer" type="buchungsnummerTyp"/>
+		<xs:attribute name="stornoversiecherung" type="stornoversiecherungTyp"/>
+	</xs:complexType>
+
+	<xs:simpleType name="bezahlstatusTyp">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Ja"/>
+			<xs:enumeration value="Nein"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="bezahlartTyp">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Bar"/>
+			<xs:enumeration value="Visa"/>
+			<xs:enumeration value="MasterCard"/>
+			<xs:enumeration value="Überweisung"/>
+			<xs:enumeration value="AmEx"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="reiseversiecherungTyp">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Ja"/>
+			<xs:enumeration value="Nein"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="buchungsnummerTyp">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z]{3}[0-9]{5}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="stornoversiecherungTyp">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Ja"/>
+			<xs:enumeration value="Nein"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="reisezielTyp">
+		<xs:sequence>
+			<xs:element name="land"/>
+			<xs:element name="stadt"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="verpflegungTyp">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Früschtück"/>
+			<xs:enumeration value="Halbpension"/>
+			<xs:enumeration value="Vollpension"/>
+			<xs:enumeration value="Keine"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="unterbringungTyp">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="3-Stern"/>
+			<xs:enumeration value="4-Stern"/>
+			<xs:enumeration value="5-Stern"/>
+			<xs:enumeration value="Pension"/>
+			<xs:enumeration value="Keine"/>
+			
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="preisTyp">
+		<xs:restriction base="xs:float">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="9999.99"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

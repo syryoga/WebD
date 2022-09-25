@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://serghei.org/TeilnemerListe.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://serghei.org/TeilnemerListe.xsd"
+    xmlns:mstns="http://serghei.org/TeilnemerListe.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+	<xs:element name="Teilnehmerliste">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="teilnehmer" type="tnTyp" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="tnTyp">
+			<xs:sequence>
+				<xs:element name="vorname" type="xs:string" />
+				<xs:element name="nachname" type="xs:string" />
+				<xs:element name="alter" type="altersTyp" />
+			</xs:sequence>
+		<xs:attribute name="geschlecht" type="TypGeschlecht" use="required"/>
+	</xs:complexType>
+
+	<xs:simpleType name="TypGeschlecht">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Mann"/>
+			<xs:enumeration value="Frau"/>
+			<xs:enumeration value="Divers"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="altersTyp">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="18"/>
+			<xs:maxInclusive value="65"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

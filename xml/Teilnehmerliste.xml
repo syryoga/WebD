@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<?xml-stylesheet type="text/xsl" href="Teilnehmerliste_1.xslt"?>
+<?xml-stylesheet type="text/xsl" href="Teilnehmerliste_2.xslt"?>
+<?xml-stylesheet type="text/xsl" href="Teilnehmerliste_3.xslt"?>
+<?xml-stylesheet type="text/xsl" href="Teilnehmerliste_4.xslt"?>
+<?xml-stylesheet type="text/xsl" href="Teilnehmerliste_5.xslt"?>
+<?xml-stylesheet type="text/xsl" href="Teilnehmerliste_6.xslt"?>
+<?xml-stylesheet type="text/xsl" href="Teilnehmerliste_7.xslt"?>
+-->
+<?xml-stylesheet type="text/xsl" href="Teilnehmerliste_8.xslt"?>
+
+<teilnehmerliste >
+	<teilnehmer geschlecht="Mann">
+		<vorname>Alois</vorname>
+		<nachname>Frischauf</nachname>
+		<alter>32</alter>
+	</teilnehmer>
+	<teilnehmer geschlecht="Mann">
+		<vorname>Daniel</vorname>
+		<nachname>Haiduk</nachname>
+		<alter>32</alter>
+	</teilnehmer>
+	<teilnehmer geschlecht="Mann">
+		<vorname>Gerald</vorname>
+		<nachname>Hradil</nachname>
+		<alter>32</alter>
+	</teilnehmer>
+	<teilnehmer geschlecht="Mann">
+		<vorname>Robin</vorname>
+		<nachname>Mader</nachname>
+		<alter>22</alter>
+	</teilnehmer>
+	<teilnehmer geschlecht="Mann">
+		<vorname>Markus</vorname>
+		<nachname>Lenna</nachname>
+		<alter>40</alter>
+	</teilnehmer>
+	<teilnehmer geschlecht="Frau">
+		<vorname>Zenzi</vorname>
+		<nachname>Hümiblau</nachname>
+		<alter>50</alter>
+	</teilnehmer>
+	<teilnehmer geschlecht="Mann">
+		<vorname>Samuel</vorname>
+		<nachname>Schaden</nachname>
+		<alter>21</alter>
+	</teilnehmer>
+	<teilnehmer geschlecht="Mann">
+		<vorname>Nazim</vorname>
+		<nachname>Strompf</nachname>
+		<alter>33</alter>
+	</teilnehmer>
+	<teilnehmer geschlecht="Frau">
+		<vorname>Mitzi</vorname>
+		<nachname>Huber</nachname>
+		<alter>42</alter>
+	</teilnehmer>
+	
+</teilnehmerliste>

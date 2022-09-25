@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Kundenliste kundenart="Kunde" xmlns="http://serghei.org/Kundenliste.xsd">
+	<kunde>
+		<vorname>string</vorname>
+		<nachname>string</nachname>
+		<alter>int</alter>
+		<adresse adressArt="Privatadresse">
+			<strasse>anyType</strasse>
+			<postleitzahl>string</postleitzahl>
+			<ort>anyType</ort>
+			<bundesland>Wien</bundesland>
+		</adresse>
+		<reise>
+			<reiseziel>
+				<land>anyType</land>
+				<stadt>anyType</stadt>
+			</reiseziel>
+			<reisedauer>anyType</reisedauer>
+			<verpflegung>Früschtück</verpflegung>
+			<unterbringung>3-Stern</unterbringung>
+			<preis>float</preis>
+		</reise>
+	</kunde>
+</Kundenliste>
