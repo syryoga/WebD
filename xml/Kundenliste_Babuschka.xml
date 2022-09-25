@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kundenliste xmlns="http://tempuri.org/Kundenliste_Babuschka.xsd">
+	<kunde geschlecht="Mann" kundennummer="string" kundenart="Neukunde">
+		<vorname>string</vorname>
+		<nachname>string</nachname>
+		<alter>int</alter>
+		<adresse adressart="Geschäftsadresse">
+			<strasse>string</strasse>
+			<postleitzahl>string</postleitzahl>
+			<ort>string</ort>
+			<bundesland>Wien</bundesland>
+		</adresse>
+	</kunde>
+</kundenliste>
