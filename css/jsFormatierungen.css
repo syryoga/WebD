@@ -1,0 +1,10 @@
+
+#ausgabe1,#ausgabe2,#ausgabe3,#ausgabe4,#ausgabe5{
+    background-color:gold;
+    color: maroon;
+    border: 5px solid maroon;
+    padding: 10px;
+    font:bold 16pt Verdana;
+    width: 500px;
+    margin-bottom: 20px;
+}
